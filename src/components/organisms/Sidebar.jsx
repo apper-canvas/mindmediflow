@@ -151,6 +151,8 @@ const Sidebar = ({ isOpen, onClose }) => {
           </nav>
         </div>
       </aside>
-    </>
+</>
   );
 };
+
+export default Sidebar;
