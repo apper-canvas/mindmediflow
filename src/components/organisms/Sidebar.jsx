@@ -1,7 +1,7 @@
 import { NavLink, useLocation } from "react-router-dom";
+import React from "react";
 import { cn } from "@/utils/cn";
 import ApperIcon from "@/components/ApperIcon";
-
 const Sidebar = ({ isOpen, onClose }) => {
   const location = useLocation();
 
@@ -154,5 +154,3 @@ const Sidebar = ({ isOpen, onClose }) => {
     </>
   );
 };
-
-export default Sidebar;

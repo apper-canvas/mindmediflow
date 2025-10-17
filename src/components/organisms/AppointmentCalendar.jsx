@@ -11,6 +11,7 @@ import appointmentService from "@/services/api/appointmentService";
 import patientService from "@/services/api/patientService";
 import doctorService from "@/services/api/doctorService";
 import { format, addDays, subDays } from "date-fns";
+import { toast } from "react-toastify";
 
 const AppointmentCalendar = ({ className }) => {
   const [appointments, setAppointments] = useState([]);
@@ -43,9 +44,18 @@ const AppointmentCalendar = ({ className }) => {
     }
   };
 
-  useEffect(() => {
+useEffect(() => {
     loadData();
   }, [selectedDate]);
+
+  const handleSendReminder = async (appointmentId) => {
+    try {
+      await appointmentService.sendReminder(appointmentId, 'patient');
+      toast.success("Appointment reminder sent successfully");
+    } catch (error) {
+      toast.error(error.message || "Failed to send reminder");
+    }
+  };
 
   const getPatientById = (patientId) => {
     return patients.find(p => p.Id === patientId);

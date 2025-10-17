@@ -1,16 +1,18 @@
-import DashboardStats from "@/components/organisms/DashboardStats";
-import PatientTable from "@/components/organisms/PatientTable";
-import AppointmentCalendar from "@/components/organisms/AppointmentCalendar";
-import Loading from "@/components/ui/Loading";
-import Error from "@/components/ui/Error";
-import Card from "@/components/atoms/Card";
-import Button from "@/components/atoms/Button";
-import ApperIcon from "@/components/ApperIcon";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import patientService from "@/services/api/patientService";
 import appointmentService from "@/services/api/appointmentService";
-
+import ApperIcon from "@/components/ApperIcon";
+import PatientTable from "@/components/organisms/PatientTable";
+import AppointmentCalendar from "@/components/organisms/AppointmentCalendar";
+import DashboardStats from "@/components/organisms/DashboardStats";
+import Button from "@/components/atoms/Button";
+import Badge from "@/components/atoms/Badge";
+import Card from "@/components/atoms/Card";
+import Appointments from "@/components/pages/Appointments";
+import Patients from "@/components/pages/Patients";
+import Loading from "@/components/ui/Loading";
+import Error from "@/components/ui/Error";
 const Dashboard = () => {
   const navigate = useNavigate();
   const [recentPatients, setRecentPatients] = useState([]);
@@ -202,14 +204,49 @@ const Dashboard = () => {
                 <span className="text-sm text-gray-500">2 hours ago</span>
               </div>
               
-              <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                 <span className="text-gray-600">Storage Used</span>
                 <span className="text-sm text-gray-500">45% of 100GB</span>
               </div>
             </div>
           </Card>
+
+          {/* Notifications widget */}
+          <Card className="p-6 bg-gradient-to-br from-blue-50 to-primary-50">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <ApperIcon name="Bell" className="w-5 h-5 text-primary" />
+              Upcoming Notifications
+            </h3>
+            
+            <div className="space-y-3">
+              <div className="flex items-center justify-between py-2 border-b border-blue-100">
+                <span className="text-gray-600">Pending Reminders</span>
+                <Badge variant="warning">
+                  {appointmentService.getUpcomingReminders(24).length}
+                </Badge>
+              </div>
+              
+              <div className="flex items-center justify-between py-2 border-b border-blue-100">
+                <span className="text-gray-600">Today's Alerts</span>
+                <Badge variant="info">
+                  {appointmentService.getUpcomingReminders(1).length}
+                </Badge>
+              </div>
+              
+              <Button
+                variant="primary"
+                size="sm"
+                className="w-full mt-3"
+                icon="Send"
+                onClick={() => navigate("/notifications")}
+              >
+                Manage Notifications
+              </Button>
+</div>
+          </Card>
         </div>
       </div>
+    </div>
     </div>
   );
 };

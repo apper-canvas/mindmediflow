@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import Layout from "@/components/organisms/Layout";
 
 // Lazy load pages
@@ -7,8 +7,8 @@ const Dashboard = lazy(() => import("@/components/pages/Dashboard"));
 const Patients = lazy(() => import("@/components/pages/Patients"));
 const PatientDetail = lazy(() => import("@/components/pages/PatientDetail"));
 const Appointments = lazy(() => import("@/components/pages/Appointments"));
+const Notifications = lazy(() => import("@/components/pages/Notifications"));
 const NotFound = lazy(() => import("@/components/pages/NotFound"));
-
 const mainRoutes = [
   {
     path: "",
@@ -28,7 +28,7 @@ const mainRoutes = [
     )
   },
   {
-    path: "patients/:patientId",
+    path: "patients/:id",
     element: (
       <Suspense fallback={<div>Loading.....</div>}>
         <PatientDetail />
@@ -40,6 +40,14 @@ const mainRoutes = [
     element: (
       <Suspense fallback={<div>Loading.....</div>}>
         <Appointments />
+      </Suspense>
+    )
+  },
+  {
+    path: "notifications",
+    element: (
+      <Suspense fallback={<div>Loading.....</div>}>
+        <Notifications />
       </Suspense>
     )
   },

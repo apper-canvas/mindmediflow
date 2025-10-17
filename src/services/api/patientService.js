@@ -1,4 +1,6 @@
 import patientsData from "@/services/mockData/patients.json";
+import React from "react";
+import Error from "@/components/ui/Error";
 
 class PatientService {
   constructor() {
@@ -62,7 +64,7 @@ class PatientService {
     return { ...this.patients[index] };
   }
 
-  async search(query) {
+async search(query) {
     await new Promise(resolve => setTimeout(resolve, 150));
     const lowerQuery = query.toLowerCase();
     return this.patients.filter(patient =>
@@ -71,6 +73,11 @@ class PatientService {
       patient.phone.includes(query) ||
       patient.email.toLowerCase().includes(lowerQuery)
     );
+  }
+
+  async getPatientEmail(patientId) {
+    const patient = await this.getById(patientId);
+    return patient ? patient.email : null;
   }
 }
 
