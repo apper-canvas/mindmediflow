@@ -8,6 +8,7 @@ const Patients = lazy(() => import("@/components/pages/Patients"));
 const PatientDetail = lazy(() => import("@/components/pages/PatientDetail"));
 const Appointments = lazy(() => import("@/components/pages/Appointments"));
 const Notifications = lazy(() => import("@/components/pages/Notifications"));
+const Doctors = lazy(() => import("@/components/pages/Doctors"));
 const NotFound = lazy(() => import("@/components/pages/NotFound"));
 const mainRoutes = [
   {
@@ -48,6 +49,14 @@ const mainRoutes = [
     element: (
       <Suspense fallback={<div>Loading.....</div>}>
         <Notifications />
+      </Suspense>
+    )
+  },
+{
+    path: "doctors",
+    element: (
+      <Suspense fallback={<div>Loading.....</div>}>
+        <Doctors />
       </Suspense>
     )
   },

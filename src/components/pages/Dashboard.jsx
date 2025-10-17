@@ -142,13 +142,21 @@ const Dashboard = () => {
               >
                 Schedule Appointment
               </Button>
-              <Button
+<Button
                 variant="outline"
                 className="w-full justify-start"
                 icon="Search"
                 onClick={() => navigate("/patients")}
               >
                 Search Patients
+              </Button>
+              <Button
+                variant="outline"
+                className="w-full justify-start"
+                icon="Stethoscope"
+                onClick={() => navigate("/doctors")}
+              >
+                View Doctors
               </Button>
             </div>
           </Card>

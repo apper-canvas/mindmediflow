@@ -20,7 +20,12 @@ const Sidebar = ({ isOpen, onClose }) => {
     {
       name: "Appointments",
       href: "/appointments",
-      icon: "Calendar"
+icon: "Calendar"
+    },
+    {
+      path: "/doctors",
+      label: "Doctors",
+      icon: "Stethoscope"
     }
   ];
 
