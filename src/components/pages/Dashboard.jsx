@@ -10,6 +10,7 @@ import Button from "@/components/atoms/Button";
 import Badge from "@/components/atoms/Badge";
 import Card from "@/components/atoms/Card";
 import Appointments from "@/components/pages/Appointments";
+import Notifications from "@/components/pages/Notifications";
 import Patients from "@/components/pages/Patients";
 import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
@@ -202,9 +203,9 @@ const Dashboard = () => {
               <div className="flex items-center justify-between">
                 <span className="text-gray-600">Last Backup</span>
                 <span className="text-sm text-gray-500">2 hours ago</span>
-              </div>
+</div>
               
-<div className="flex items-center justify-between">
+              <div className="flex items-center justify-between">
                 <span className="text-gray-600">Storage Used</span>
                 <span className="text-sm text-gray-500">45% of 100GB</span>
               </div>
@@ -242,11 +243,10 @@ const Dashboard = () => {
               >
                 Manage Notifications
               </Button>
-</div>
+            </div>
           </Card>
         </div>
       </div>
-    </div>
     </div>
   );
 };
