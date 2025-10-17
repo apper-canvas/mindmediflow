@@ -1,0 +1,98 @@
+[
+  {
+    "Id": 1,
+    "patientId": 1,
+    "doctorId": 1,
+    "scheduledDate": "2024-12-20",
+    "startTime": "09:00",
+    "endTime": "09:30",
+    "status": "scheduled",
+    "reason": "Annual Physical Exam",
+    "notes": "Patient requested early morning appointment",
+    "createdAt": "2024-12-15T10:00:00.000Z"
+  },
+  {
+    "Id": 2,
+    "patientId": 2,
+    "doctorId": 2,
+    "scheduledDate": "2024-12-20",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "in-progress",
+    "reason": "Diabetes Follow-up",
+    "notes": "Review blood sugar logs and medication adjustment",
+    "createdAt": "2024-12-15T11:30:00.000Z"
+  },
+  {
+    "Id": 3,
+    "patientId": 3,
+    "doctorId": 1,
+    "scheduledDate": "2024-12-20",
+    "startTime": "11:00",
+    "endTime": "11:30",
+    "status": "completed",
+    "reason": "Follow-up Visit",
+    "notes": "Post-vaccination check-up completed successfully",
+    "createdAt": "2024-12-15T09:45:00.000Z"
+  },
+  {
+    "Id": 4,
+    "patientId": 4,
+    "doctorId": 3,
+    "scheduledDate": "2024-12-20",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "status": "scheduled",
+    "reason": "Cholesterol Check",
+    "notes": "3-month follow-up for cholesterol management",
+    "createdAt": "2024-12-15T14:20:00.000Z"
+  },
+  {
+    "Id": 5,
+    "patientId": 5,
+    "doctorId": 2,
+    "scheduledDate": "2024-12-21",
+    "startTime": "09:30",
+    "endTime": "10:00",
+    "status": "scheduled",
+    "reason": "Migraine Consultation",
+    "notes": "Follow-up on new medication effectiveness",
+    "createdAt": "2024-12-16T08:15:00.000Z"
+  },
+  {
+    "Id": 6,
+    "patientId": 6,
+    "doctorId": 3,
+    "scheduledDate": "2024-12-21",
+    "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "scheduled",
+    "reason": "Arthritis Treatment",
+    "notes": "Review physical therapy progress and pain management",
+    "createdAt": "2024-12-16T12:30:00.000Z"
+  },
+  {
+    "Id": 7,
+    "patientId": 1,
+    "doctorId": 1,
+    "scheduledDate": "2024-12-22",
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "status": "scheduled",
+    "reason": "Blood Pressure Check",
+    "notes": "Monthly hypertension monitoring",
+    "createdAt": "2024-12-17T16:45:00.000Z"
+  },
+  {
+    "Id": 8,
+    "patientId": 2,
+    "doctorId": 2,
+    "scheduledDate": "2024-12-23",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "cancelled",
+    "reason": "Diabetes Consultation",
+    "notes": "Patient cancelled due to scheduling conflict",
+    "createdAt": "2024-12-17T10:20:00.000Z"
+  }
+]

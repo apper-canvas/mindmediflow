@@ -1,0 +1,77 @@
+[
+  {
+    "Id": 1,
+    "patientId": 1,
+    "doctorId": 1,
+    "visitDate": "2024-12-19",
+    "checkInTime": "09:15",
+    "checkOutTime": "09:45",
+    "symptoms": "Headache, fatigue",
+    "diagnosis": "Tension headache, mild stress",
+    "prescriptions": [
+      {
+        "medication": "Ibuprofen 400mg",
+        "dosage": "As needed for headache",
+        "duration": "5 days"
+      }
+    ],
+    "notes": "Patient reports work-related stress. Recommended relaxation techniques and follow-up in 2 weeks if symptoms persist.",
+    "followUpRequired": true
+  },
+  {
+    "Id": 2,
+    "patientId": 2,
+    "doctorId": 2,
+    "visitDate": "2024-12-18",
+    "checkInTime": "10:30",
+    "checkOutTime": "11:15",
+    "symptoms": "Elevated blood sugar readings",
+    "diagnosis": "Diabetes management adjustment needed",
+    "prescriptions": [
+      {
+        "medication": "Metformin 850mg",
+        "dosage": "Twice daily with meals",
+        "duration": "30 days"
+      }
+    ],
+    "notes": "Blood sugar levels have been elevated. Increased Metformin dosage. Patient educated on dietary modifications. Blood work ordered for next visit.",
+    "followUpRequired": true
+  },
+  {
+    "Id": 3,
+    "patientId": 3,
+    "doctorId": 1,
+    "visitDate": "2024-12-17",
+    "checkInTime": "11:00",
+    "checkOutTime": "11:20",
+    "symptoms": "Routine check-up",
+    "diagnosis": "Healthy, no concerns",
+    "prescriptions": [],
+    "notes": "Annual physical examination completed. All vital signs normal. Flu vaccination administered. Next routine visit in 12 months.",
+    "followUpRequired": false
+  },
+  {
+    "Id": 4,
+    "patientId": 4,
+    "doctorId": 3,
+    "visitDate": "2024-12-16",
+    "checkInTime": "14:00",
+    "checkOutTime": "14:30",
+    "symptoms": "Chest discomfort, shortness of breath",
+    "diagnosis": "Stable angina, hypertension",
+    "prescriptions": [
+      {
+        "medication": "Nitroglycerin 0.4mg",
+        "dosage": "As needed for chest pain",
+        "duration": "30 days"
+      },
+      {
+        "medication": "Metoprolol 25mg",
+        "dosage": "Twice daily",
+        "duration": "30 days"
+      }
+    ],
+    "notes": "EKG shows stable angina. Blood pressure elevated. Started on beta-blocker. Stress test scheduled for next week. Advised to avoid strenuous activity.",
+    "followUpRequired": true
+  }
+]

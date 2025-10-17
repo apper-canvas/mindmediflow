@@ -1,0 +1,47 @@
+[
+  {
+    "Id": 1,
+    "name": "Dr. Michael Anderson",
+    "specialization": "Family Medicine",
+    "phone": "(555) 111-2222",
+    "email": "m.anderson@hospital.com",
+    "availability": {
+      "monday": ["09:00-17:00"],
+      "tuesday": ["09:00-17:00"],
+      "wednesday": ["09:00-17:00"],
+      "thursday": ["09:00-17:00"],
+      "friday": ["09:00-15:00"]
+    },
+    "currentPatients": [1, 3, 7]
+  },
+  {
+    "Id": 2,
+    "name": "Dr. Jennifer Kim",
+    "specialization": "Internal Medicine",
+    "phone": "(555) 333-4444",
+    "email": "j.kim@hospital.com",
+    "availability": {
+      "monday": ["08:00-16:00"],
+      "tuesday": ["08:00-16:00"],
+      "wednesday": ["08:00-16:00"],
+      "thursday": ["08:00-16:00"],
+      "friday": ["08:00-12:00"]
+    },
+    "currentPatients": [2, 5]
+  },
+  {
+    "Id": 3,
+    "name": "Dr. Robert Thompson",
+    "specialization": "Cardiology",
+    "phone": "(555) 555-6666",
+    "email": "r.thompson@hospital.com",
+    "availability": {
+      "monday": ["10:00-18:00"],
+      "tuesday": ["10:00-18:00"],
+      "wednesday": ["10:00-18:00"],
+      "thursday": ["10:00-18:00"],
+      "friday": ["10:00-14:00"]
+    },
+    "currentPatients": [4, 6]
+  }
+]
