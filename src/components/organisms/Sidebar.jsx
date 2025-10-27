@@ -23,8 +23,8 @@ const Sidebar = ({ isOpen, onClose }) => {
 icon: "Calendar"
     },
     {
-      path: "/doctors",
-      label: "Doctors",
+      href: "/doctors",
+      name: "Doctors",
       icon: "Stethoscope"
     }
   ];
